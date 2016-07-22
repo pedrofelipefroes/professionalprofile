@@ -141,6 +141,8 @@ a:hover {
   }
   
   .content-box {
+    min-width: 50%;
+    
     .box-title {
       margin-bottom: .25em;
       
@@ -301,12 +303,6 @@ a:hover {
 }
 
 .slider {
-  &:nth-of-type(2) {
-    .slide {
-      box-shadow: inset 0px 2px 3px 0px rgba(0,0,0,0.5);
-    }
-  }
-  
   .img-shadow {
     img {
       @extend .box-shadow;
@@ -318,15 +314,14 @@ a:hover {
   .slide {
     @extend .flex-row;
     
-    background-color: $white;
-    height: 15em;
-    justify-content: center;
     padding: 1em;
+    
+    background-color: $white;
+    justify-content: center;
     transition: all 500ms ease-in-out;
     
     img {
       max-height: 100%;
-      max-width: 100%;
     }
   }
   
@@ -337,6 +332,7 @@ a:hover {
     margin-top: -5em;
     opacity: .25;
     text-align: center;
+    z-index: 2;
     
     i {
       transition: all 250ms ease-in-out;
@@ -384,7 +380,7 @@ a:hover {
 /* @ RULES */
 
 // MEDIA QUERIES
-@media (min-width: 800px) {
+@media (min-width: 801px) {
   body {
     display: flex;
     flex-direction: column;
@@ -398,6 +394,7 @@ a:hover {
     padding-bottom: .5em;
     padding-top: 2em;
     width: 20%;
+    min-width: 12em;
   }
   
   .container-content {
@@ -405,6 +402,7 @@ a:hover {
     
     margin-right: 2em;
     width: 20%;
+    min-width: 12em;
     
     background-color: $black;
     color: $black;
@@ -487,6 +485,7 @@ a:hover {
     padding-bottom: 1em;
     padding-top: 5em;
     width: 20%;
+    min-width: 12em;
     
     background-color: $black;
     color: $white;
@@ -505,6 +504,16 @@ a:hover {
       margin-bottom: .25em;
       
       font-size: 2.5em;
+    }
+  }
+  
+  .slider {
+    .slide {
+      height: 12em;
+      
+      img {
+        max-width: 80%;
+      }
     }
   }
   
@@ -531,10 +540,7 @@ a:hover {
   }
 }
 
-@media (min-width: 481px) and (max-width: 799px) {
-}
-
-@media (max-width: 480px) {
+@media (max-width: 800px) {
   .container-content {
     color: $white;
     
@@ -596,6 +602,20 @@ a:hover {
     
     margin-bottom: 2em;
     margin-top: 2em;
+  }
+  
+  .slider {
+    &:nth-of-type {
+      box-shadow: inset 0px 2px 3px 0px rgba(0,0,0,0.5);
+    }
+    
+    .slide {
+      height: 15em;
+      
+      img {
+        max-width: 100%;
+      }
+    }
   }
   
   #content-design {
