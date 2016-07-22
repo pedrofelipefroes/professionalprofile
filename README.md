@@ -1,7 +1,7 @@
 ## Avenue Code UI Workshop
 ### Professional Profile
 
-gh-pages: 
+gh-pages: https://pedrofelipefroes.github.io/professionalprofile/
 
 Professional profile site with education and work experiences, as well as design and drawings gallery. Created using the following technologies:
 
