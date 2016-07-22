@@ -1,12 +1,14 @@
-# Avenue Code UI Workshop
-## Professional Profile
+## Avenue Code UI Workshop
+### Professional Profile
 
 gh-pages: 
 
 Professional profile site with education and work experiences, as well as design and drawings gallery. Created using the following technologies:
-1. HTML5, CSS3 & JavaScript;
-1. Sass;
-1. npm & jQuery.
+
+- HTML5, CSS3 & JavaScript
+- Sass
+- jQuery
+- npm
 
 ```
 PEDRO FELIPE FROES
