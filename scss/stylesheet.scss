@@ -1,0 +1,612 @@
+/* SCSS organized alphabetically
+ * in the following order:
+ *
+ * IMPORTS, MIXINS & VARIABLES
+ *    Imports
+ *    Mixins
+ *    Colors
+ *    Fonts
+ *    Font weights
+ *
+ * STYLE
+ *    Tags
+ *    Classes
+ *      Display
+ *      Containers
+ *    IDs
+ *
+ * @ RULES
+ *    Media Queries
+ */
+
+/* IMPORTS & VARIABLES */
+
+// IMPORTS
+@import 'https://fonts.googleapis.com/css?family=Assistant:200,400,600';
+
+// COLORS
+$black: #212121;
+$blue: #3F51B5;
+$green: #4CAF50;
+$purple: #9C27B0;
+$red: #F44336;
+$white: rgb(255, 255, 255);
+$white-transparent: rgba(255, 255, 255, .5);
+
+// FONTS
+$serif: 'Assistant', sans-serif;
+
+// FONT WEIGHTS
+$bold: 600;
+$regular: 400;
+$thin: 200;
+
+/* STYLE */
+
+// TAGS
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+// CLASSES
+// CLASSES/Display
+.box-shadow {
+  box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.5);
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-row {
+  display: flex;
+  align-items: center
+}
+
+.flex-spacebetween {
+  justify-content: space-between;
+}
+
+.rotate-180deg {
+  transform: rotate(180deg);
+}
+
+// CLASSES/Containers
+.container-contact {
+  @extend .flex-col, .flex-spacebetween;
+  
+  background-color: $black;
+  color: $white;
+  font-family: $serif;
+  
+  span {
+    font-size: .8em;
+    font-weight: $thin;
+    text-align: center;
+    
+    &:last-of-type {
+      font-size: .6em;
+    }
+    
+    a {
+      color: $white;
+      font-weight: $bold;
+      text-decoration: none;
+      transition: color 250ms ease-in-out;
+      
+      &:hover {
+        color: $purple;
+      }
+    }
+  }
+  
+  .container-social {
+    @extend .flex-row, .flex-spacebetween;
+    
+    margin: .5em 0;
+    
+    a {
+      height: 1.5em;
+      margin: 0 .25em;
+      width: 1.5em;
+      
+      color: $white;
+      border: 1px solid $white;
+      border-radius: 50%;
+      font-size: 1.25em;
+      line-height: 1.5em;
+      text-align: center;
+      transition: all 250ms ease-in-out;
+  
+      &:hover {
+        border: 1px solid $purple;
+        color: $purple;
+      }
+    }
+  }
+}
+
+.container-content {
+  font-family: $serif;
+  
+  i {
+    padding: 0 .5em;
+  }
+  
+  .content-box {
+    .box-title {
+      margin-bottom: .25em;
+      
+      font-weight: $thin;
+    }
+    
+    .education-box {
+      padding-bottom: .75em;
+    
+      .education-experience-box {
+        margin-bottom: .5em;
+        margin-left: 3.5em;
+
+        span {
+          display: block;
+          
+          &:first-of-type {
+            font-weight: $bold;
+          }
+          
+          &:nth-child(2) {
+            font-weight: $thin;
+          }
+          
+          &:last-of-type {
+            font-weight: $regular;
+          }
+        }
+      }
+    }
+    
+    .skills-box {
+      @extend .flex-row;
+      
+      align-items: flex-start;
+      flex-flow: wrap;
+      
+      margin-left: 3.5em;
+      padding-bottom: .75em;
+      padding-top: .25em;
+      
+      .skill-item {
+        margin-right: .25em;
+        margin-bottom: .5em;
+        padding: .1em .5em;
+        
+        border-radius: 1em;
+
+        i {
+          padding: 0 .25em;
+        }
+      }
+    }
+    
+    .work-box {
+      padding-bottom: .75em;
+      
+      .work-experience-box {
+        @extend .flex-row;
+        
+        margin-bottom: .5em;
+        width: 100%;
+
+        .experience-description {
+          span {
+            display: block;
+
+            &:first-of-type {
+              font-weight: $bold;
+            }
+
+            &:nth-child(2) {
+              font-weight: $thin;
+            }
+
+            &:last-of-type {
+              font-weight: $regular;
+            }
+          }
+        }
+
+        .experience-logo {
+          padding: 0 .5em;
+          width: 2.5em;
+        }
+      }
+    }
+  }
+}
+
+.container-header {
+  position: fixed;
+  
+  top: 0;
+  width: 100%;
+  
+  .header-bar {
+    @extend .flex-col;
+    
+    margin: 0;
+    
+    background-color: $black;
+    
+    a:hover {
+      i {
+        transform: scale(1.5);
+      }
+    }
+  }
+}
+
+.container-profile {
+  color: $black;
+  font-family: $serif;
+    
+  img {
+    display: block;
+    
+    margin: 1em 0;
+    width: 50%;
+    
+    border-radius: 50%;
+  }
+
+  span {
+    font-family: $serif;
+    font-weight: $thin;
+    text-align: center;
+  }
+
+  span:first-of-type {
+    font-size: 3em;
+  }
+}
+
+.header-bar {
+  @extend .box-shadow;
+  
+  height: 2.5em;
+  margin-top: .5em;
+  
+  color: $white;
+  font-family: $serif;
+  font-weight: $thin;
+  line-height: 2.5em;
+  
+  a {
+    color: $white;
+  }
+  
+  i:last-of-type {
+    float: right;
+    
+    padding: 0 1em;
+    
+    transition: all 250ms ease-in-out;
+  }
+}
+
+.slider {
+  &:nth-of-type(2) {
+    .slide {
+      box-shadow: inset 0px 2px 3px 0px rgba(0,0,0,0.5);
+    }
+  }
+  
+  .img-shadow {
+    img {
+      @extend .box-shadow;
+      
+      margin: 0 .5em;
+    }
+  }
+  
+  .slide {
+    @extend .flex-row;
+    
+    background-color: $white;
+    height: 15em;
+    justify-content: center;
+    padding: 1em;
+    transition: all 500ms ease-in-out;
+    
+    img {
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+  
+  .slider-nav {
+    color: $black;
+    font-size: 2em;
+    height: 5em;
+    margin-top: -5em;
+    opacity: .25;
+    text-align: center;
+    
+    i {
+      transition: all 250ms ease-in-out;
+      
+      &:active {
+        color: $purple;
+        outline: none;
+      }
+      
+      &:first-of-type {
+        float: left;
+        font-size: 1.5em;
+      }
+      
+      &:hover {
+        cursor: pointer;
+        transform: scale(.8);
+      }
+      
+      &:last-of-type {
+        float: right;
+        font-size: 1.5em;
+      }
+    }
+  }
+}
+
+// IDS
+#content-design, #content-drawings, #content-work {
+  display: none;
+}
+
+#header-design {
+  background-color: $green;
+}
+
+#header-drawings {
+  background-color: $red;
+}
+
+#header-work {
+  background-color: $blue;
+}
+
+/* @ RULES */
+
+// MEDIA QUERIES
+@media (min-width: 800px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .container-contact {
+    align-self: flex-end;
+    
+    margin-right: 2em;
+    padding-bottom: .5em;
+    padding-top: 2em;
+    width: 20%;
+  }
+  
+  .container-content {
+    align-self: flex-end;
+    
+    margin-right: 2em;
+    width: 20%;
+    
+    background-color: $black;
+    color: $black;
+    
+    .content-box {
+      height: 41em;
+      left: 0;
+      margin-left: 2em;
+      margin-top: 2em;
+      position: absolute;
+      top: 0;
+      width: 72.5%;
+      z-index: -1;
+      
+      .box-title {
+        margin-left: 1.75em;
+        
+        font-size: 2em;
+      }
+      
+      .education-box {
+        .education-experience-box {
+          height: 4.5em;
+          
+          span {
+            font-size: 1.25em;
+            
+            &:first-of-type {
+              color: $blue;
+            }
+            
+            &:nth-child(2), &:last-of-type {
+              font-size: 1em;
+            }
+          }
+        }
+      }
+      
+      .skills-box {
+        .skill-item {
+          border: 1px solid $black;
+          font-size: 1em;
+        }
+      }
+      
+      .work-box {
+        .work-experience-box {
+          .experience-description {
+            span {
+              font-size: 1.25em;
+              
+              &:first-of-type {
+                color: $blue;
+              }
+              
+              &:nth-child(2), &:last-of-type {
+                font-size: 1em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .container-header {
+    display: none;
+  }
+  
+  .container-profile {
+    align-items: center;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    
+    box-sizing: border-box;
+    margin-right: 2em;
+    margin-top: 0;
+    padding: 0 1em;
+    padding-bottom: 1em;
+    padding-top: 5em;
+    width: 20%;
+    
+    background-color: $black;
+    color: $white;
+    
+    img {
+      width: 80%;
+    }
+    
+    span {
+      display: block;
+      
+      font-size: .7em;
+    }
+    
+    span:first-of-type {
+      margin-bottom: .25em;
+      
+      font-size: 2.5em;
+    }
+  }
+  
+  #content-design, #content-drawings, #content-work {
+    background-color: $white;
+  }
+  
+  #content-design {
+    .box-title {
+      color: $green;
+    }
+  }
+  
+  #content-drawings {
+    .box-title {
+      color: $red;
+    }
+  }
+  
+  #content-work {
+    .box-title {
+      color: $blue;
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 799px) {
+}
+
+@media (max-width: 480px) {
+  .container-content {
+    color: $white;
+    
+    .content-box {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      
+      box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.5);
+      
+      .box-title {
+        margin-left: 3.5em;
+        
+        border-bottom: 1px solid $white-transparent;
+      }
+      
+      .education-box {
+        .education-experience-box {
+          height: 3em;
+          
+          span {
+            &:nth-child(2), &:last-of-type {
+              font-size: .6em;
+            }
+          }
+        }
+      }
+      
+      .skills-box {
+        .skill-item {
+          border: 1px solid $white;
+          font-size: .7em;
+        }
+      }
+      
+      .work-box {
+        .work-experience-box {
+          .experience-description {
+            span {
+              &:nth-child(2), &:last-of-type {
+                font-size: .6em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .container-contact {
+    margin-top: .5em;
+    padding: 1em 0;
+  }
+  
+  .container-profile {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    
+    margin-bottom: 2em;
+    margin-top: 2em;
+  }
+  
+  #content-design {
+    background-color: $green;
+  }
+  
+  #content-drawings {
+    background-color: $red;
+  }
+  
+  #content-work {
+    background-color: $blue;
+  }
+}

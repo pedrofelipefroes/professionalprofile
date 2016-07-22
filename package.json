@@ -1,0 +1,22 @@
+{
+  "name": "professionalwebsite",
+  "version": "1.0.0",
+  "description": "A professional website for Pedro Felipe Froes",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedrofelipefroes/professionalwebsite.git"
+  },
+  "author": "Pedro Felipe Froes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pedrofelipefroes/professionalwebsite/issues"
+  },
+  "homepage": "https://github.com/pedrofelipefroes/professionalwebsite#readme",
+  "dependencies": {
+    "jquery": "^3.1.0"
+  }
+}

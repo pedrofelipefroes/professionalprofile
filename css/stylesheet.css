@@ -1,0 +1,347 @@
+/* SCSS organized alphabetically
+ * in the following order:
+ *
+ * IMPORTS, MIXINS & VARIABLES
+ *    Imports
+ *    Mixins
+ *    Colors
+ *    Fonts
+ *    Font weights
+ *
+ * STYLE
+ *    Tags
+ *    Classes
+ *      Display
+ *      Containers
+ *    IDs
+ *
+ * @ RULES
+ *    Media Queries
+ */
+/* IMPORTS & VARIABLES */
+@import "https://fonts.googleapis.com/css?family=Assistant:200,400,600";
+/* STYLE */
+* {
+  margin: 0;
+  padding: 0; }
+
+a:hover {
+  cursor: pointer; }
+
+.box-shadow, .header-bar, .slider .img-shadow img {
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.5); }
+
+.flex-col, .container-contact, .container-header .header-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.flex-row, .container-contact .container-social, .container-content .content-box .skills-box, .container-content .content-box .work-box .work-experience-box, .slider .slide {
+  display: flex;
+  align-items: center; }
+
+.flex-spacebetween, .container-contact, .container-contact .container-social {
+  justify-content: space-between; }
+
+.rotate-180deg {
+  transform: rotate(180deg); }
+
+.container-contact {
+  background-color: #212121;
+  color: white;
+  font-family: "Assistant", sans-serif; }
+  .container-contact span {
+    font-size: .8em;
+    font-weight: 200;
+    text-align: center; }
+    .container-contact span:last-of-type {
+      font-size: .6em; }
+    .container-contact span a {
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 250ms ease-in-out; }
+      .container-contact span a:hover {
+        color: #9C27B0; }
+  .container-contact .container-social {
+    margin: .5em 0; }
+    .container-contact .container-social a {
+      height: 1.5em;
+      margin: 0 .25em;
+      width: 1.5em;
+      color: white;
+      border: 1px solid white;
+      border-radius: 50%;
+      font-size: 1.25em;
+      line-height: 1.5em;
+      text-align: center;
+      transition: all 250ms ease-in-out; }
+      .container-contact .container-social a:hover {
+        border: 1px solid #9C27B0;
+        color: #9C27B0; }
+
+.container-content {
+  font-family: "Assistant", sans-serif; }
+  .container-content i {
+    padding: 0 .5em; }
+  .container-content .content-box .box-title {
+    margin-bottom: .25em;
+    font-weight: 200; }
+  .container-content .content-box .education-box {
+    padding-bottom: .75em; }
+    .container-content .content-box .education-box .education-experience-box {
+      margin-bottom: .5em;
+      margin-left: 3.5em; }
+      .container-content .content-box .education-box .education-experience-box span {
+        display: block; }
+        .container-content .content-box .education-box .education-experience-box span:first-of-type {
+          font-weight: 600; }
+        .container-content .content-box .education-box .education-experience-box span:nth-child(2) {
+          font-weight: 200; }
+        .container-content .content-box .education-box .education-experience-box span:last-of-type {
+          font-weight: 400; }
+  .container-content .content-box .skills-box {
+    align-items: flex-start;
+    flex-flow: wrap;
+    margin-left: 3.5em;
+    padding-bottom: .75em;
+    padding-top: .25em; }
+    .container-content .content-box .skills-box .skill-item {
+      margin-right: .25em;
+      margin-bottom: .5em;
+      padding: .1em .5em;
+      border-radius: 1em; }
+      .container-content .content-box .skills-box .skill-item i {
+        padding: 0 .25em; }
+  .container-content .content-box .work-box {
+    padding-bottom: .75em; }
+    .container-content .content-box .work-box .work-experience-box {
+      margin-bottom: .5em;
+      width: 100%; }
+      .container-content .content-box .work-box .work-experience-box .experience-description span {
+        display: block; }
+        .container-content .content-box .work-box .work-experience-box .experience-description span:first-of-type {
+          font-weight: 600; }
+        .container-content .content-box .work-box .work-experience-box .experience-description span:nth-child(2) {
+          font-weight: 200; }
+        .container-content .content-box .work-box .work-experience-box .experience-description span:last-of-type {
+          font-weight: 400; }
+      .container-content .content-box .work-box .work-experience-box .experience-logo {
+        padding: 0 .5em;
+        width: 2.5em; }
+
+.container-header {
+  position: fixed;
+  top: 0;
+  width: 100%; }
+  .container-header .header-bar {
+    margin: 0;
+    background-color: #212121; }
+    .container-header .header-bar a:hover i {
+      transform: scale(1.5); }
+
+.container-profile {
+  color: #212121;
+  font-family: "Assistant", sans-serif; }
+  .container-profile img {
+    display: block;
+    margin: 1em 0;
+    width: 50%;
+    border-radius: 50%; }
+  .container-profile span {
+    font-family: "Assistant", sans-serif;
+    font-weight: 200;
+    text-align: center; }
+  .container-profile span:first-of-type {
+    font-size: 3em; }
+
+.header-bar {
+  height: 2.5em;
+  margin-top: .5em;
+  color: white;
+  font-family: "Assistant", sans-serif;
+  font-weight: 200;
+  line-height: 2.5em; }
+  .header-bar a {
+    color: white; }
+  .header-bar i:last-of-type {
+    float: right;
+    padding: 0 1em;
+    transition: all 250ms ease-in-out; }
+
+.slider:nth-of-type(2) .slide {
+  box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.5); }
+.slider .img-shadow img {
+  margin: 0 .5em; }
+.slider .slide {
+  background-color: white;
+  height: 15em;
+  justify-content: center;
+  padding: 1em;
+  transition: all 500ms ease-in-out; }
+  .slider .slide img {
+    max-height: 100%;
+    max-width: 100%; }
+.slider .slider-nav {
+  color: #212121;
+  font-size: 2em;
+  height: 5em;
+  margin-top: -5em;
+  opacity: .25;
+  text-align: center; }
+  .slider .slider-nav i {
+    transition: all 250ms ease-in-out; }
+    .slider .slider-nav i:active {
+      color: #9C27B0;
+      outline: none; }
+    .slider .slider-nav i:first-of-type {
+      float: left;
+      font-size: 1.5em; }
+    .slider .slider-nav i:hover {
+      cursor: pointer;
+      transform: scale(0.8); }
+    .slider .slider-nav i:last-of-type {
+      float: right;
+      font-size: 1.5em; }
+
+#content-design, #content-drawings, #content-work {
+  display: none; }
+
+#header-design {
+  background-color: #4CAF50; }
+
+#header-drawings {
+  background-color: #F44336; }
+
+#header-work {
+  background-color: #3F51B5; }
+
+/* @ RULES */
+@media (min-width: 800px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+
+  .container-contact {
+    align-self: flex-end;
+    margin-right: 2em;
+    padding-bottom: .5em;
+    padding-top: 2em;
+    width: 20%; }
+
+  .container-content {
+    align-self: flex-end;
+    margin-right: 2em;
+    width: 20%;
+    background-color: #212121;
+    color: #212121; }
+    .container-content .content-box {
+      height: 41em;
+      left: 0;
+      margin-left: 2em;
+      margin-top: 2em;
+      position: absolute;
+      top: 0;
+      width: 72.5%;
+      z-index: -1; }
+      .container-content .content-box .box-title {
+        margin-left: 1.75em;
+        font-size: 2em; }
+      .container-content .content-box .education-box .education-experience-box {
+        height: 4.5em; }
+        .container-content .content-box .education-box .education-experience-box span {
+          font-size: 1.25em; }
+          .container-content .content-box .education-box .education-experience-box span:first-of-type {
+            color: #3F51B5; }
+          .container-content .content-box .education-box .education-experience-box span:nth-child(2), .container-content .content-box .education-box .education-experience-box span:last-of-type {
+            font-size: 1em; }
+      .container-content .content-box .skills-box .skill-item {
+        border: 1px solid #212121;
+        font-size: 1em; }
+      .container-content .content-box .work-box .work-experience-box .experience-description span {
+        font-size: 1.25em; }
+        .container-content .content-box .work-box .work-experience-box .experience-description span:first-of-type {
+          color: #3F51B5; }
+        .container-content .content-box .work-box .work-experience-box .experience-description span:nth-child(2), .container-content .content-box .work-box .work-experience-box .experience-description span:last-of-type {
+          font-size: 1em; }
+
+  .container-header {
+    display: none; }
+
+  .container-profile {
+    align-items: center;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin-right: 2em;
+    margin-top: 0;
+    padding: 0 1em;
+    padding-bottom: 1em;
+    padding-top: 5em;
+    width: 20%;
+    background-color: #212121;
+    color: white; }
+    .container-profile img {
+      width: 80%; }
+    .container-profile span {
+      display: block;
+      font-size: .7em; }
+    .container-profile span:first-of-type {
+      margin-bottom: .25em;
+      font-size: 2.5em; }
+
+  #content-design, #content-drawings, #content-work {
+    background-color: white; }
+
+  #content-design .box-title {
+    color: #4CAF50; }
+
+  #content-drawings .box-title {
+    color: #F44336; }
+
+  #content-work .box-title {
+    color: #3F51B5; } }
+@media (max-width: 480px) {
+  .container-content {
+    color: white; }
+    .container-content .content-box {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.5); }
+      .container-content .content-box .box-title {
+        margin-left: 3.5em;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
+      .container-content .content-box .education-box .education-experience-box {
+        height: 3em; }
+        .container-content .content-box .education-box .education-experience-box span:nth-child(2), .container-content .content-box .education-box .education-experience-box span:last-of-type {
+          font-size: .6em; }
+      .container-content .content-box .skills-box .skill-item {
+        border: 1px solid white;
+        font-size: .7em; }
+      .container-content .content-box .work-box .work-experience-box .experience-description span:nth-child(2), .container-content .content-box .work-box .work-experience-box .experience-description span:last-of-type {
+        font-size: .6em; }
+
+  .container-contact {
+    margin-top: .5em;
+    padding: 1em 0; }
+
+  .container-profile {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+    margin-top: 2em; }
+
+  #content-design {
+    background-color: #4CAF50; }
+
+  #content-drawings {
+    background-color: #F44336; }
+
+  #content-work {
+    background-color: #3F51B5; } }
+
+/*# sourceMappingURL=stylesheet.css.map */
