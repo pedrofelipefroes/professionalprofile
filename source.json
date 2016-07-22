@@ -1,0 +1,24 @@
+{
+  "profile": {
+    "greeting": "Hello",
+    "description": "My name is Pedro <br> and I'm a Computer Engineer to be <br> who's really excited to mix <br> programming and creativity together.<br> Check out some of my work below!",
+  },
+  "work_education": {
+    "education": {
+      "header": "education",
+      "experience": [
+        {
+          "title": "BS in Computer Engineering",
+          "timespan": "01/2014, 12/2017 (in progress)",
+          "location": "CEFET-MG, Belo Horizonte/Brazil"
+        },
+        {
+          "title": "Academic exchange at IIT, Chicago",
+          "timespan": "01/2013, 12/2013",
+          "location": "Illinois Institute of Technology, Chicago/USA"
+        }]
+    }
+  },
+  "design": "",
+  "drawings": ""
+}
